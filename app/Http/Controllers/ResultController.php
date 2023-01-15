@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Result;
 use App\Models\Student;
 use App\Models\Subject;
-use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
 class ResultController extends Controller
