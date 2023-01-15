@@ -41,11 +41,8 @@
                                             </td>
                                             @foreach ($subjects as $subject)
                                             <td>
-                                                @foreach ($student->results as $result)
-                                                @if ($result->subject_id == $subject->id)
-                                                {{ $result->marks }}
-                                                @endif
-                                                @endforeach
+                                                {{ $student->results->where('subject_id',
+                                                $subject->id)->first()->marks??0}}
                                             </td>
                                             @endforeach
                                         </tr>
